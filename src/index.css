@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Stylish&display=swap');
+
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-head: 'Averia Sans Libre', sans-serif;
+  --font-main: 'Stylish', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-300 text-slate-900 dark:bg-slate-900 dark:text-slate-300 font-main m-0 p-0 box-border;
+  }
+}
+
+@layer components {
+  .themeButton {
+    @apply  mt-2 ml-2 flex gap-2 text-[20px] items-center justify-center border-2 w-24 py-1 px-2 rounded-md border-slate-900 dark:border-slate-300;
+  }
+}
