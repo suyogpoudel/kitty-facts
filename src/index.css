@@ -17,6 +17,6 @@
 
 @layer components {
   .themeButton {
-    @apply  mt-2 ml-2 flex gap-2 text-[20px] items-center justify-center border-2 w-24 py-1 px-2 rounded-md border-slate-900 dark:border-slate-300;
+    @apply  mt-2 ml-2 flex gap-2 text-[20px] items-center justify-center border-2 w-24 py-1 px-2 rounded-md bg-slate-900 text-slate-300 dark:bg-slate-300 dark:text-slate-900 transition-all duration-300;
   }
 }
