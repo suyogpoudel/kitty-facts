@@ -57,11 +57,14 @@ const App = () => {
         };
     }
 
-    useEffect(() => {
+    const getData = () => {
         getCatFacts();
 
         getCatPics();
+    }
 
+    useEffect(() => {
+        getData()
     }, []);
 
     const toggleDarkMode = () => {
@@ -76,6 +79,7 @@ const App = () => {
             }</span>
 
             <h1 className='text-[50px] text-center font-head'>Kitty Facts :)</h1>
+
                 {
                    catFacts.length > 0 ? <ul className='grid gap-8 grid-cols-[repeat(auto-fit,400px)]'>
                            {
@@ -87,7 +91,7 @@ const App = () => {
                        <p className='text-2xl text-center w-[75%] mx-auto mt-7'>Loading...</p>
                 }
 
-                <button onClick={() => getCatFacts()} className='text-2xl flex justify-center items-center mx-auto mt-7 py-2 px-4 rounded-md bg-slate-900 text-slate-300 dark:bg-slate-300 dark:text-slate-900 hover:opacity-90 active:opacity-75 cursor-pointer'>New Facts</button>
+                <button onClick={() => getData()} className='text-2xl flex justify-center items-center mx-auto mt-7 py-2 px-4 rounded-md bg-slate-900 text-slate-300 dark:bg-slate-300 dark:text-slate-900 hover:opacity-90 active:opacity-75 cursor-pointer'>New Facts</button>
 
         {/*
           display: grid;
